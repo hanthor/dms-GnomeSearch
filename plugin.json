@@ -1,0 +1,15 @@
+{
+    "id": "gnomeSearchProviders",
+    "name": "GNOME Search Providers",
+    "description": "Integrate GNOME Shell search providers (Bazaar, Files, Calculator, etc.) into DMS launcher",
+    "version": "1.0.0",
+    "author": "DMS Community",
+    "type": "launcher",
+    "capabilities": ["launcher"],
+    "component": "./GnomeSearchProvidersLauncher.qml",
+    "settings": "./GnomeSearchProvidersSettings.qml",
+    "icon": "search",
+    "requires_dms": ">=0.1.18",
+    "permissions": ["settings_read", "settings_write"],
+    "requires": ["gdbus"]
+}

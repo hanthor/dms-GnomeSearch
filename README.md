@@ -548,6 +548,39 @@ For production, this could be replaced with native Quickshell DBus support.
 - **Caching**: Bazaar caches search results internally
 - **Debouncing**: Use DMS launcher's built-in search debouncing
 
+## Development
+
+This plugin includes a `justfile` for streamlined development. Install [just](https://github.com/casey/just) to use these commands.
+
+### Quick Start
+
+```bash
+# Restart DMS and watch logs (recommended for development)
+just dev
+
+# Show all available commands
+just --list
+
+# Debug plugin issues
+just debug
+```
+
+### Common Commands
+
+- **`just logs`** - Watch filtered logs for this plugin
+- **`just restart`** - Restart DMS to reload changes
+- **`just test-all`** - Test if all search providers are available
+- **`just validate-json`** - Validate plugin.json syntax
+
+### Development Workflow
+
+1. Make changes to QML or JSON files
+2. Run `just dev` to restart and watch logs
+3. Test the changes in the DMS launcher
+4. Check `just errors` if issues occur
+
+For detailed development instructions, see [AGENTS.md](./AGENTS.md).
+
 ## Future Enhancements
 
 - [ ] Native Quickshell DBus integration (non-blocking)
